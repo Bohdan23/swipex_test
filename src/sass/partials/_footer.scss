@@ -1,0 +1,60 @@
+.footer {
+	background-color: #3d3d3d;
+	font-family: $amedium;
+	font-size: 12px;
+	padding: 20px 0;
+	& > .container {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		@include m(992) {
+			justify-content: center;
+		}
+		@include m(768) {
+			display: block;
+			text-align: center;
+		}
+	}
+	span {
+		color: #d9d9d9;
+		@include m(768) {
+			display: block;
+			margin: 25px 0 0 0;
+		}
+	}
+	&__envelope {
+		font-size: 25px !important;
+		margin-right: 20px;
+		@include m(768) {
+			display: block;
+		}
+	}
+	&__envelope, a {
+		color: #ffffff;
+	}
+	&__email {
+		margin-left: 15px;
+		@include m(768) {
+			display: block;
+			margin: 25px 0 0 0;
+		}
+	}
+	&__socials {
+		margin-left: 40px;
+		&__item {
+			font-size: 16px !important;
+			margin-right: 15px;
+			transition: color .25s ease;
+			&:hover {
+				color: #ffe89c;
+			}
+		}
+		@include m(768) {
+			display: block;
+			margin: 25px 0 0 0;
+			&__items {
+				margin-right: 0;
+			}
+		}
+	}
+}

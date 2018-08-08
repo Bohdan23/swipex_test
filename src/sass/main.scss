@@ -1,0 +1,81 @@
+@import "helpers/_reset.scss";
+@import "helpers/_fonts.scss";
+@import "helpers/_variables.scss";
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	min-width: 320px;
+	left: 0;
+	margin: 0;
+	position: relative;
+	font-family: $alight;
+	@include mn(769) {
+		left: 0 !important;
+	}
+}
+
+input, select, textarea {
+	outline: none;
+}
+
+.container {
+	/*background: rgba(255, 0, 0, .1);*/
+	margin: 0 auto;
+	width: 100%;
+
+	@include mn(768) {
+	    width: 750px;
+	}
+	@include mn(992) {
+	    width: 970px;
+	}
+	@include mn(1280) {
+	    width: 1240px;
+	}
+	@include m(768) {
+		padding: 0 10px;
+	}
+}
+
+.logo {
+	margin-bottom: 53px;
+	@include m(1280) {
+		margin-bottom: 45px;
+		img {
+			width: 175px;
+		}	
+	}
+	@include m(992) {
+		margin-bottom: 40px;
+		img {
+			width: 165px;
+		}	
+	}
+	@include m(768) {
+		margin-bottom: 35px;
+		img {
+			width: 150px;
+		}
+	}
+	@include m(480) {
+		margin-bottom: 30px;
+		img {
+			width: 140px;
+		}
+	}
+}
+
+@import "partials/_hero";
+@import "partials/_navigation";
+@import "partials/_products";
+@import "partials/_about";
+@import "partials/_rating";
+@import "partials/_footer";
+@import "helpers/font-awesome/_font-awesome";

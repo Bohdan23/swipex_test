@@ -1,0 +1,32 @@
+.products__item__rating {
+	@include clearfix;
+	width: 82px;
+	&__input {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+    	left: -99999em;
+		&:checked ~ .products__item__rating__icon:after {
+			color: #fcd51c;
+		} 		
+	}
+	&__icon {
+		cursor: pointer;
+		float: right;
+		padding-right: 4px;
+		&:after {
+			content: "\f005";
+			font-family: FontAwesome;
+			color: #bdbdbd;
+			font-size: 13px;
+		}
+		&:hover {
+			&:after {
+				color: #fcd51c;
+			}
+			& ~ .products__item__rating__icon:after {
+				color: #fcd51c;
+			} 		
+		}
+	}
+}

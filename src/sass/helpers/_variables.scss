@@ -1,0 +1,46 @@
+/*fonts*/
+$nlight: nexa_light, sans-serif;
+$nblack: nexa_black, sans-serif;
+$abold: avenir_bold, sans-serif;
+$aheavy: avenir_heavy, sans-serif;
+$alight: avenir_light, sans-serif;
+$amedium: avenir_medium, sans-serif;
+$fa: normal normal normal 14px/1 FontAwesome;
+
+/*media*/
+@mixin m($media) {
+    @media only screen and (max-width: $media+'px') {
+        @content;
+    }
+}
+
+@mixin mn($media) {
+    @media only screen and (min-width: $media+'px') {
+        @content;
+    }
+}
+
+/*placeholder*/
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder { 
+        @content;
+    }
+    &::-moz-placeholder { 
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+/*clearfix*/
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
